@@ -1,5 +1,5 @@
 const recent = [
-  {title:"Mokey's Show - Episode 1",thumb:"assets/images/mokey_ep1.jpg",src:"assets/videos/mokey_ep1.mp4",cat:"youtube"},
+  {title:"Regular Show - Season 1 Episode 1 - The Power",thumb:"https://archive.org/download/regshow/regshow.thumbs/The%20Regular%20Show%20S01-S08%20%2B%20Movie%20%2B%20Shorts%20%5B1080p%20BluRay%20x265%20HEVC%2010bit%5D/Season%201/Regular%20Show%20S01E01%20The%20Power%20%5B%2BCommentary%5D_000001.jpg",src:"https://dn720303.ca.archive.org/0/items/regshow/The%20Regular%20Show%20S01-S08%20%2B%20Movie%20%2B%20Shorts%20%5B1080p%20BluRay%20x265%20HEVC%2010bit%5D/Season%201/Regular%20Show%20S01E01%20The%20Power%20%5B%2BCommentary%5D.mp4",cat:"cartoon"},
   {title:"Gumball - Short",thumb:"assets/images/gumball1.jpg",src:"assets/videos/gumball1.mp4",cat:"cartoon"},
   {title:"SpongeBob - Clip",thumb:"assets/images/sb1.jpg",src:"assets/videos/sb1.mp4",cat:"nick"},
 ];

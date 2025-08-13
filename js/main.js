@@ -31,12 +31,18 @@ recent.forEach((r, i)=>{
 });
 
 function setVideo(item){
-  // set source safely
-  const src = item.src;
-  // update screen bug by category
-  if(item.cat === 'cartoon') screenBug.textContent = 'Cartoon Network';
-  else if(item.cat === 'nick') screenBug.textContent = 'Nickelodeon';
-  else screenBug.textContent = 'YouTube';
+  let bugImg = 'assets/screenbugs/streamx.png';
+  if(item.cat === 'cartoon') bugImg = 'assets/screenbugs/cartoon.png';
+  else if(item.cat === 'nick') bugImg = 'assets/screenbugs/nick.png';
+  else if(item.cat === 'youtube') bugImg = 'assets/screenbugs/youtube.png';
+  
+  document.querySelector('#screenBug img').src = bugImg;
+  
+  video.pause();
+  video.querySelectorAll('source').forEach(s=> s.src = item.src);
+  video.load();
+  if(autoplayToggle.checked) video.play().catch(()=>{});
+}
 
   // load
   video.pause();

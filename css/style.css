@@ -1,0 +1,103 @@
+:root{
+  --hulu-green:#66aa33;
+  --bg:#0f0f10;
+  --card:#1b1b1c;
+  --muted:#9aa0a6;
+  --accent:var(--hulu-green);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:#fff;
+  -webkit-font-smoothing:antialiased;
+}
+.topbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 24px;
+  background:linear-gradient(180deg, rgba(0,0,0,.5), transparent);
+  border-bottom:1px solid rgba(255,255,255,.03);
+}
+.logo{
+  font-weight:800;
+  letter-spacing:2px;
+  color:var(--accent);
+  font-size:20px;
+}
+.nav a{
+  color:#ddd;
+  margin:0 10px;
+  text-decoration:none;
+  font-size:14px;
+}
+.controls input{
+  padding:6px 8px;
+  border-radius:4px;
+  border:none;
+  margin-right:10px;
+}
+.container{padding:20px 28px;}
+.featured-player{background:var(--card);padding:14px;border-radius:8px;position:relative;}
+.player-wrapper{position:relative;}
+#mainVideo{
+  width:100%;
+  display:block;
+  border-radius:6px;
+  background:black;
+}
+.screen-bug{
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:rgba(0,0,0,.6);
+  padding:6px 8px;
+  border-radius:4px;
+  font-size:12px;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.05);
+}
+.player-overlay{
+  position:absolute;
+  bottom:12px;
+  left:12px;
+  display:flex;
+  gap:10px;
+  align-items:center;
+}
+.btn{
+  background:rgba(0,0,0,.6);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.06);
+  padding:8px 10px;
+  border-radius:4px;
+  cursor:pointer;
+}
+.rows{margin-top:18px;}
+.row{
+  display:flex;
+  gap:12px;
+  overflow-x:auto;
+  padding-bottom:8px;
+}
+.thumb{
+  width:180px;
+  background:var(--card);
+  border-radius:6px;
+  padding:8px;
+  flex:0 0 auto;
+  transition:transform .18s ease;
+}
+.thumb:hover{transform:scale(1.03)}
+.thumb img{width:100%;border-radius:4px;display:block}
+.thumb .meta{padding:6px 0;font-size:13px;color:var(--muted)}
+.loading{
+  display:inline-block;
+  width:36px;height:36px;border-radius:50%;
+  border:4px solid rgba(255,255,255,.08);
+  border-top-color:var(--accent);
+  animation:spin 1s linear infinite;
+}
+@keyframes spin{to{transform:rotate(360deg)}}

@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StreamX — 2015 Hulu Style</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">STREAMX</div>
+    <nav class="nav">
+      <a href="#" data-cat="all">Home</a>
+      <a href="#" data-cat="cartoon">Cartoon Network</a>
+      <a href="#" data-cat="nick">Nickelodeon</a>
+      <a href="#" data-cat="youtube">YouTube</a>
+    </nav>
+    <div class="controls">
+      <input id="search" placeholder="Search" />
+      <button id="profile">Profile</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="featured">
+      <h2>Featured</h2>
+      <div class="featured-player">
+        <div class="player-wrapper">
+          <video id="mainVideo" playsinline controls preload="metadata">
+            <source src="assets/videos/sample.mp4" type="video/mp4">
+            Your browser doesn't support HTML5 video.
+          </video>
+          <div id="screenBug" class="screen-bug">YouTube</div>
+          <div class="player-overlay">
+            <button id="skipIntro" class="btn">Skip Intro</button>
+            <label class="toggle">
+              Autoplay <input id="autoplayToggle" type="checkbox" />
+            </label>
+            <button id="captionsBtn" class="btn">CC</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rows">
+      <h3>Recent Episodes</h3>
+      <div class="row" id="recentRow">
+        <!-- thumbnails populated by JS -->
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
